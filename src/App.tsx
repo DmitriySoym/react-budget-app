@@ -1,9 +1,10 @@
-import React from "react";
+import { StyledApp } from "./style";
+import { Budget } from "components";
 
 export const App = () => {
   return (
-    <div>
-      <h1>Budget App</h1>
-    </div>
+    <StyledApp>
+      <Budget />
+    </StyledApp>
   );
 };
