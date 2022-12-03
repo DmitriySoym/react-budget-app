@@ -1,10 +1,10 @@
 import { StyledApp } from "./style";
-import { Budget } from "components";
+import { Header } from "components";
 
 export const App = () => {
   return (
     <StyledApp>
-      <Budget />
+      <Header />
     </StyledApp>
   );
 };

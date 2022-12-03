@@ -1,3 +1,3 @@
-import { CurrencyContext, CurrencyContexyProvider } from "./CurrencyContext/CurrencyContext";
+import { CurrencyContexyProvider, useCurrencyContext } from "./CurrencyContext/CurrencyContext";
 
-export { CurrencyContext, CurrencyContexyProvider };
+export { CurrencyContexyProvider, useCurrencyContext };

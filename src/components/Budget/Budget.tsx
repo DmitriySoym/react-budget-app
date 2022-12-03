@@ -1,10 +1,7 @@
-import { Title } from "components";
+import { useCurrencyContext } from "context";
 import { StyledBudget } from "./style";
 
 export const Budget = () => {
-  return (
-    <StyledBudget>
-      <Title value="Budget App" />
-    </StyledBudget>
-  );
+  const { currentCurrensy } = useCurrencyContext();
+  return <StyledBudget>Budget: {currentCurrensy.value}</StyledBudget>;
 };
