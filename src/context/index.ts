@@ -1,3 +1,4 @@
-import { CurrencyContexyProvider, useCurrencyContext } from "./CurrencyContext/CurrencyContext";
+import { CurrencyContextProvider, useCurrencyContext } from "./CurrencyContext/CurrencyContext";
+import { useBudgetContext, BudgetContextProvider } from "./BudgetContext/BudgetContext";
 
-export { CurrencyContexyProvider, useCurrencyContext };
+export { CurrencyContextProvider, useCurrencyContext, useBudgetContext, BudgetContextProvider };

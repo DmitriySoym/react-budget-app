@@ -40,7 +40,7 @@ const useCurrencyContextValue = () => {
 
 export const useCurrencyContext = () => useContext<ICurrencyContext>(CurrencyContext);
 
-export const CurrencyContexyProvider = ({ children }: ICurrencyContextProviderProps) => {
+export const CurrencyContextProvider = ({ children }: ICurrencyContextProviderProps) => {
   return (
     <CurrencyContext.Provider value={useCurrencyContextValue()}>
       {children}
