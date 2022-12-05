@@ -59,4 +59,11 @@ const Button = styled.button`
   border-radius: 10px;
 `;
 
-export { StyledBudget, Input, Button };
+const Amount = styled.div`
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+`;
+
+export { StyledBudget, Input, Button, Amount };
