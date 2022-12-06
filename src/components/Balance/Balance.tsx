@@ -1,7 +1,14 @@
-import { useCurrencyContext } from "context";
+import { useCurrencyContext, useBudgetContext } from "context";
 import { StyledBalance } from "./style";
 
 export const Balance = () => {
   const { currentCurrensy } = useCurrencyContext();
-  return <StyledBalance>Remaining: {currentCurrensy.value}</StyledBalance>;
+  const { budget } = useBudgetContext();
+
+  return (
+    <StyledBalance>
+      Remaining: {currentCurrensy.value}
+      {budget}
+    </StyledBalance>
+  );
 };

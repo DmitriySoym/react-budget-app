@@ -6,6 +6,10 @@ const StyledBalance = styled.div`
   padding: 32px 20px;
   background: #ccd5ff;
   border-radius: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
 `;
 
 export { StyledBalance };
