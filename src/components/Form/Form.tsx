@@ -1,17 +1,18 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { StyledForm, Input, Error } from "./style";
 import { Button, Title } from "../";
-import { v4 as uuidv4 } from "uuid";
-import { useBudgetContext } from "../../context";
+import { v4 } from "uuid";
+import { useBudgetContext, useExpensesContext } from "../../context";
 
 interface IFormInfo {
   name: string;
   cost: number;
+  id: string;
 }
 
 export const Form = () => {
   const { budget } = useBudgetContext();
-
+  const { newExpense } = useExpensesContext();
   const {
     register,
     handleSubmit,
@@ -20,7 +21,12 @@ export const Form = () => {
   } = useForm<IFormInfo>();
 
   const onSubmit: SubmitHandler<IFormInfo> = ({ name, cost }) => {
-    reset();
+    if (budget > 0) {
+      newExpense({ name, cost, id: v4() });
+      reset();
+    } else {
+      alert("Your budget is empty. Please, enter your badget value.");
+    }
   };
 
   return (
@@ -32,7 +38,7 @@ export const Form = () => {
         placeholder="enter name ..."
         {...register("name", {
           required: "Enter name of your expense",
-          minLength: { value: 3, message: "Name length manimum 3 symbols" },
+          minLength: { value: 3, message: "Name length minimum 3 symbols" },
         })}
       />
       {errors.name && <Error>{errors.name.message}</Error>}
@@ -41,7 +47,7 @@ export const Form = () => {
         placeholder="enter cost ..."
         {...register("cost", {
           required: "Enter your expense price",
-          max: { value: 999999, message: "Max cost 999999, enter real cost" },
+          max: { value: 999999, message: "Enter real cost" },
         })}
       />
       {errors.cost && <Error>{errors.cost.message}</Error>}
