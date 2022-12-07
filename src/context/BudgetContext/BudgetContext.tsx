@@ -3,13 +3,9 @@ import { IBudgetContext, IBudgetContextProviderProps } from "./types";
 
 const BudgetContext = createContext<IBudgetContext>({} as IBudgetContext);
 
-export const BudgetContextProvider = ({ children }: IBudgetContextProviderProps) => {
-  return (
-    <BudgetContext.Provider value={useBudgetProviderValue()}>{children}</BudgetContext.Provider>
-  );
-};
+export const useBudgetContext = () => useContext<IBudgetContext>(BudgetContext);
 
-const useBudgetProviderValue = () => {
+const useBudgetContextValue = () => {
   const [budgetContext, setBudgetContext] = useState<IBudgetContext>(() => ({
     budget: 0,
     setBudget: (value) => {
@@ -20,4 +16,8 @@ const useBudgetProviderValue = () => {
   return budgetContext;
 };
 
-export const useBudgetContext = () => useContext<IBudgetContext>(BudgetContext);
+export const BudgetContextProvider = ({ children }: IBudgetContextProviderProps) => {
+  return (
+    <BudgetContext.Provider value={useBudgetContextValue()}>{children}</BudgetContext.Provider>
+  );
+};

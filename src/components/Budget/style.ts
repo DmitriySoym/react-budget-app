@@ -12,6 +12,7 @@ const StyledBudget = styled.div`
 `;
 
 const Input = styled.input`
+  width: 80%;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
