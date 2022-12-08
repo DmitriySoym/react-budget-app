@@ -12,6 +12,6 @@ export interface IExpensesContext {
   removeExpense: (id: string) => void;
 }
 
-export interface IExpensesContextProvider {
+export interface IExpensesContextProviderProps {
   children: ReactNode;
 }

@@ -1,6 +1,7 @@
 import { CurrencyContextProvider, useCurrencyContext } from "./CurrencyContext/CurrencyContext";
 import { useBudgetContext, BudgetContextProvider } from "./BudgetContext/BudgetContext";
-import { useExpensesContext, ExpensesContextProvider } from "./ExpenseContext/ExpenseContext";
+import { useExpensesContext, ExpensesContextProvider } from "./ExpensesContext/ExpensesContext";
+import { AppContextProvider } from "./AppContexy/AppContext";
 
 export {
   CurrencyContextProvider,
@@ -9,4 +10,5 @@ export {
   BudgetContextProvider,
   useExpensesContext,
   ExpensesContextProvider,
+  AppContextProvider,
 };
