@@ -3,7 +3,7 @@ import { StyledBudget, Input, Button, Amount } from "./style";
 import { useInput, useToggle } from "hooks";
 
 export const Budget = () => {
-  const { currentCurrensy } = useCurrencyContext();
+  const { currentCurrency } = useCurrencyContext();
   const { budget, setBudget } = useBudgetContext();
   const [isEditMode, toggleIsEditMode] = useToggle();
   const budgetAmount = useInput();
@@ -25,7 +25,7 @@ export const Budget = () => {
       ) : (
         <>
           <Amount>
-            Budget: {currentCurrensy.value}
+            Budget: {currentCurrency.value}
             {budget}
           </Amount>
           <Button onClick={handleEdit}>Edit</Button>

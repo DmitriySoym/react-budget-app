@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
 
-export interface IExpenses {
+export interface IExpense {
   name: string;
   cost: number;
   id: string;
 }
 
 export interface IExpensesContext {
-  expenses: IExpenses[];
-  newExpense: (newExpense: IExpenses) => void;
+  expenses: IExpense[];
+  newExpense: (newExpense: IExpense) => void;
   removeExpense: (id: string) => void;
 }
 

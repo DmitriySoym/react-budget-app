@@ -3,9 +3,9 @@ import { useCurrencyContext } from "context";
 import { customStyles } from "./style";
 
 export const CustomSelect = () => {
-  const { currencies, currentCurrensy, setNewCurrency } = useCurrencyContext();
+  const { currencies, currentCurrency, setNewCurrency } = useCurrencyContext();
 
-  const handleSelect = (option: SingleValue<typeof currentCurrensy>) => {
+  const handleSelect = (option: SingleValue<typeof currentCurrency>) => {
     if (option) {
       setNewCurrency(option);
     }
@@ -14,7 +14,7 @@ export const CustomSelect = () => {
   return (
     <Select
       options={currencies}
-      value={currentCurrensy}
+      value={currentCurrency}
       onChange={handleSelect}
       isMulti={false}
       isSearchable={false}

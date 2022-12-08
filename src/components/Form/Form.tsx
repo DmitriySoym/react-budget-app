@@ -47,11 +47,11 @@ export const Form = () => {
         placeholder="enter cost ..."
         {...register("cost", {
           required: "Enter your expense price",
-          max: { value: 999999, message: "Enter real cost" },
+          max: { value: 999999999, message: "Enter real cost" },
         })}
       />
       {errors.cost && <Error>{errors.cost.message}</Error>}
-      <Button label="Done" />
+      <Button label="Done" type="submit" />
     </StyledForm>
   );
 };

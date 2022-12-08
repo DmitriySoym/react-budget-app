@@ -5,8 +5,8 @@ const StyledBudget = styled.div`
   flex-direction: row;
   justify-content: space-between;
   grid-column: span 2;
-  height: 100px;
-  padding: 32px 20px;
+  height: 60px;
+  padding: 12px 20px;
   background: #7cc6fe;
   border-radius: 10px;
 `;
@@ -17,6 +17,8 @@ const Input = styled.input`
   font-size: 20px;
   line-height: 24px;
   background-color: inherit;
+  align-self: center;
+
   &::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.6);
   }
@@ -51,6 +53,10 @@ const Input = styled.input`
   &:focus:focus:-ms-input-placeholder {
     color: transparent;
   }
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
 `;
 
 const Button = styled.button`
@@ -61,6 +67,7 @@ const Button = styled.button`
 `;
 
 const Amount = styled.div`
+  align-self: center;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;

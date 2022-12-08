@@ -1,16 +1,17 @@
 import { useCurrencyContext } from "context";
+import { ReactNode } from "react";
 import { StyledBudge } from "./style";
 
 interface IProps {
-  cost: number;
+  children: ReactNode;
 }
 
-export const Budge = ({ cost }: IProps) => {
-  const { currentCurrensy } = useCurrencyContext();
+export const Budge = ({ children }: IProps) => {
+  const { currentCurrency } = useCurrencyContext();
   return (
     <StyledBudge>
-      {currentCurrensy.value}
-      {cost}
+      {currentCurrency.value}
+      {children}
     </StyledBudge>
   );
 };

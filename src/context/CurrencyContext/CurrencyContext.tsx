@@ -6,7 +6,7 @@ const CurrencyContext = createContext<ICurrencyContext>({} as ICurrencyContext);
 
 const useCurrencyContextValue = () => {
   const [currencyContext, setCurrencyContext] = useState<ICurrencyContext>(() => ({
-    currentCurrensy: {
+    currentCurrency: {
       label: "USD",
       value: Currency.USD,
     },
@@ -30,8 +30,8 @@ const useCurrencyContextValue = () => {
       },
     ],
 
-    setNewCurrency: (currentCurrensy) => {
-      setCurrencyContext((ctx) => ({ ...ctx, currentCurrensy }));
+    setNewCurrency: (currentCurrency) => {
+      setCurrencyContext((ctx) => ({ ...ctx, currentCurrency }));
     },
   }));
 

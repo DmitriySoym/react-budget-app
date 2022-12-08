@@ -5,6 +5,10 @@ const StyledForm = styled.form`
   flex-direction: column;
   row-gap: 30px;
   padding: 30px 20px 53px;
+
+  @media (max-width: 640px) {
+    padding: 10px 0 33px;
+  }
 `;
 
 const Input = styled.input`

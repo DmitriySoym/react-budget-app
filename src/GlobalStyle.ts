@@ -34,7 +34,9 @@ html,body{
   font-size:14px;
   -ms-text-size-adjust:100%;
   -moz-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%;}
+  -webkit-text-size-adjust:100%;
+  background:rgb(30, 53, 66);
+}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}

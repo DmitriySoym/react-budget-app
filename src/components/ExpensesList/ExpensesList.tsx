@@ -1,18 +1,17 @@
-import { useExpensesContext } from "context";
+import { ExpensesListItem } from "..";
+import { IExpense } from "context/ExpensesContext/types";
+import { List } from "./style";
 
-export const ExpensesList = () => {
-  const { expenses } = useExpensesContext();
-  console.log(expenses);
+interface IProps {
+  expenses: IExpense[];
+}
 
+export const ExpensesList = ({ expenses }: IProps) => {
   return (
-    <ul>
-      {" "}
+    <List>
       {expenses.map(({ name, cost, id }) => (
-        <li>
-          {" "}
-          name={name} price={cost} id={id} key={id}
-        </li>
+        <ExpensesListItem name={name} cost={cost} id={id} key={id} />
       ))}
-    </ul>
+    </List>
   );
 };
