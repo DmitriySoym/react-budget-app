@@ -6,5 +6,22 @@ import { Balance } from "./Balance/Balance";
 import { Spent } from "./Spent/Spent";
 import { Form } from "./Form/Form";
 import { Button } from "./Button/Button";
+import { Expenses } from "./Expenses/Expensis";
+import { SearchInput } from "./SearchInput/SearchInput";
+import { ExpensesList } from "./ExpensesList/ExpensesList";
+import { Budge } from "./Budge/Budge";
 
-export { Header, CustomSelect, Title, Budget, Balance, Spent, Form, Button };
+export {
+  Header,
+  CustomSelect,
+  Title,
+  Budget,
+  Balance,
+  Spent,
+  Form,
+  Button,
+  Expenses,
+  SearchInput,
+  ExpensesList,
+  Budge,
+};

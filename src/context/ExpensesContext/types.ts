@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-interface IExpenses {
+export interface IExpenses {
   name: string;
   cost: number;
   id: string;
