@@ -15,7 +15,6 @@ export const Expenses = () => {
     setFilteredExpenses(
       expenses.filter((expense) => expense.name.toLowerCase().includes(search.value.toLowerCase())),
     );
-    console.log(expenses);
   }, [expenses, debauncedValue]);
 
   return (
