@@ -1,4 +1,4 @@
-import { StyledExpenses, EmptyList } from "./style";
+import { StyledExpenses } from "./style";
 import { Title, SearchInput, ExpensesList } from "components";
 import { useExpensesContext } from "context";
 import { useEffect, useState } from "react";
@@ -20,12 +20,8 @@ export const Expenses = () => {
   return (
     <StyledExpenses>
       <Title value="Expenses" />
-      <SearchInput {...search} type="serch" placeholder="search ..." name="search" />
-      {expenses.length ? (
-        <ExpensesList expenses={filteredExpenses} />
-      ) : (
-        <EmptyList>Oooops 🙈</EmptyList>
-      )}
+      <SearchInput {...search} />
+      <ExpensesList expenses={filteredExpenses} />
     </StyledExpenses>
   );
 };

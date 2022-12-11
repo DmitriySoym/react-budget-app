@@ -10,10 +10,4 @@ const StyledExpenses = styled.section`
   }
 `;
 
-const EmptyList = styled.div`
-  text-align: center;
-  font-size: 20px;
-  line-height: 24px;
-`;
-
-export { StyledExpenses, EmptyList };
+export { StyledExpenses };

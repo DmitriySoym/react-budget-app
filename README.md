@@ -5,7 +5,7 @@ It will help you make a shopping list and plan your expenses, according to your 
 
 [View app](https://dmitriysoym.github.io/react-budget-app/)
 
-<img src = 'https://github.com/DmitriySoym/react-budget-app/blob/main/src/assets/Budget-app.png' alt='Project screenshot'>
+<img src = 'https://github.com/DmitriySoym/react-budget-app/blob/main/src/Budget-app.png' alt='Project screenshot'>
 
 ## This application was developed in React, tools used:
 

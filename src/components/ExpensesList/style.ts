@@ -6,4 +6,10 @@ const List = styled.ul`
   overflow: auto;
 `;
 
-export { List };
+const EmptyList = styled.div`
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+`;
+
+export { List, EmptyList };

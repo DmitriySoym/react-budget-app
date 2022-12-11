@@ -5,7 +5,7 @@ export const Spent = () => {
   const { currentCurrency } = useCurrencyContext();
   const { expenses } = useExpensesContext();
 
-  const spentValue = expenses.reduce((accum, expenses) => accum + +expenses.cost, 0);
+  const spentValue = expenses.reduce((spent, { cost }) => spent + +cost, 0);
 
   return (
     <StyledSpent>

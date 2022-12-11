@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import deleteButton from "../../assets/button-delete.svg";
+import deleteButton from "../../assets/close.svg";
 
 const Span = styled.span`
   font-size: 16px;

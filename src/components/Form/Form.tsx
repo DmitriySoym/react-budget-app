@@ -12,7 +12,7 @@ interface IFormInfo {
 
 export const Form = () => {
   const { budget } = useBudgetContext();
-  const { newExpense } = useExpensesContext();
+  const { addNewExpense } = useExpensesContext();
   const {
     register,
     handleSubmit,
@@ -22,7 +22,7 @@ export const Form = () => {
 
   const onSubmit: SubmitHandler<IFormInfo> = ({ name, cost }) => {
     if (budget > 0) {
-      newExpense({ name, cost, id: v4() });
+      addNewExpense({ name, cost, id: v4() });
       reset();
     } else {
       alert("Your budget is empty. Please, enter your badget value.");

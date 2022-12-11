@@ -7,17 +7,17 @@ export const Balance = () => {
   const { budget } = useBudgetContext();
   const { expenses } = useExpensesContext();
 
-  const [overspending, setOverspending] = useState(false);
+  const [isOverspending, setIsOverspending] = useState(false);
 
   const balance = budget - expenses.reduce((total, { cost }) => total + +cost, 0);
 
   useEffect(() => {
-    balance < 0 ? setOverspending(true) : setOverspending(false);
+    balance < 0 ? setIsOverspending(true) : setIsOverspending(false);
   }, [balance]);
 
   return (
-    <StyledBalance $isOverspended={overspending}>
-      {overspending ? "Overspending by: " : "Remaining: "}
+    <StyledBalance $isOverspended={isOverspending}>
+      {isOverspending ? "Overspending by: " : "Remaining: "}
       {currentCurrency.value}
       {Math.abs(balance)}
     </StyledBalance>

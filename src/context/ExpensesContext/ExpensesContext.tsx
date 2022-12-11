@@ -6,7 +6,7 @@ export const ExpensesContext = createContext<IExpensesContext>({} as IExpensesCo
 const useExpensesContextValue = () => {
   const [expensesContext, setExpensesContext] = useState<IExpensesContext>(() => ({
     expenses: [],
-    newExpense: (newExpense) => {
+    addNewExpense: (newExpense) => {
       setExpensesContext((ctx) => ({
         ...ctx,
         expenses: [...ctx.expenses, newExpense],

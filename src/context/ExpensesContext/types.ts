@@ -8,7 +8,7 @@ export interface IExpense {
 
 export interface IExpensesContext {
   expenses: IExpense[];
-  newExpense: (newExpense: IExpense) => void;
+  addNewExpense: (newExpense: IExpense) => void;
   removeExpense: (id: string) => void;
 }
 

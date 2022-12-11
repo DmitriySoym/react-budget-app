@@ -6,7 +6,7 @@ import { Balance } from "./Balance/Balance";
 import { Spent } from "./Spent/Spent";
 import { Form } from "./Form/Form";
 import { Button } from "./Button/Button";
-import { Expenses } from "./Expenses/Expensis";
+import { Expenses } from "./Expenses/Expenses";
 import { SearchInput } from "./SearchInput/SearchInput";
 import { ExpensesList } from "./ExpensesList/ExpensesList";
 import { Budge } from "./Budge/Budge";
