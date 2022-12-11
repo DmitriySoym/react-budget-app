@@ -7,7 +7,7 @@ const Span = styled.span`
   color: #000000;
 `;
 
-const ExpensesItem = styled.li`
+const StyledExpensesItem = styled.li`
   display: grid;
   grid-template-columns: 1.3fr 0.2fr 0.1fr;
   align-items: center;
@@ -24,4 +24,4 @@ const ButtonDelete = styled.button`
   background: url(${deleteButton}) no-repeat;
 `;
 
-export { Span, ExpensesItem, ButtonDelete };
+export { Span, StyledExpensesItem, ButtonDelete };

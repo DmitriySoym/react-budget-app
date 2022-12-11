@@ -1,5 +1,5 @@
 import { StylesConfig } from "react-select";
-import { ICurrency } from "context/CurrencyContext/types";
+import { ICurrency } from "types/idex";
 
 export const customStyles: StylesConfig<ICurrency> = {
   container: (baseStyles) => ({

@@ -10,7 +10,7 @@ import { Expenses } from "./Expenses/Expenses";
 import { SearchInput } from "./SearchInput/SearchInput";
 import { ExpensesList } from "./ExpensesList/ExpensesList";
 import { Budge } from "./Budge/Budge";
-import { ExpensesListItem } from "./ExpensesListItem/ExpensesListItem";
+import { ExpensesItem } from "./ExpensesItem/ExpensesItem";
 
 export {
   Header,
@@ -25,5 +25,5 @@ export {
   SearchInput,
   ExpensesList,
   Budge,
-  ExpensesListItem,
+  ExpensesItem,
 };

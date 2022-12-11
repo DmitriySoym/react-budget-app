@@ -1,5 +1,5 @@
-import { ExpensesListItem } from "..";
-import { IExpense } from "context/ExpensesContext/types";
+import { IExpense } from "types/idex";
+import { ExpensesItem } from "..";
 import { List, EmptyList } from "./style";
 
 interface IProps {
@@ -12,7 +12,7 @@ export const ExpensesList = ({ expenses }: IProps) => {
   ) : (
     <List>
       {expenses.map((expense) => (
-        <ExpensesListItem {...expense} key={expense.id} />
+        <ExpensesItem expense={expense} key={expense.id} />
       ))}
     </List>
   );
